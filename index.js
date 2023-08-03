@@ -85,23 +85,6 @@ function render(){
         let divIcons = document.createElement("div")
         divIcons.setAttribute("class", "icons")
         newSection.append(divIcons)
-        //create 3 icons inside divIcons
-        let iconHeart = document.createElement("i")
-        iconHeart.setAttribute("class", "fa-regular fa-heart")
-        iconHeart.addEventListener("click", function (){
-            likeCountObjectFromDb[i] += 1 
-            localStorage.setItem("likes-array", JSON.stringify(likeCountObjectFromDb))
-            likeNumSpan.textContent = likeCountObjectFromDb[i] 
-        })
-        divIcons.append(iconHeart)
-        //
-        let iconComment = document.createElement("i")
-        iconComment.setAttribute("class", "fa-regular fa-comment")
-        divIcons.append(iconComment)
-        //
-        let iconRetweet = document.createElement("i")
-        iconRetweet.setAttribute("class", "fa-solid fa-retweet")
-        divIcons.append(iconRetweet)
         // create likesParagraph inside newSection
         let likesParag = document.createElement("p")
         newSection.append(likesParag)
@@ -126,6 +109,25 @@ function render(){
         let commentSpan = document.createElement("span")
         commentSpan.textContent = " " + posts[i].comment
         commentsEl.append(commentSpan)
+        //create 3 icons inside divIcons
+        let iconHeart = document.createElement("i")
+        iconHeart.setAttribute("class", "fa-regular fa-heart")
+        iconHeart.addEventListener("click", function (){
+            likeCountObjectFromDb[i] += 1 
+            localStorage.setItem("likes-array", JSON.stringify(likeCountObjectFromDb))
+            likeNumSpan.textContent = likeCountObjectFromDb[i]
+            iconHeart.classList.remove("fa-regular");
+            iconHeart.classList.add("fa-solid");
+        })
+        divIcons.append(iconHeart)
+        //
+        let iconComment = document.createElement("i")
+        iconComment.setAttribute("class", "fa-regular fa-comment")
+        divIcons.append(iconComment)
+        //
+        let iconRetweet = document.createElement("i")
+        iconRetweet.setAttribute("class", "fa-solid fa-retweet")
+        divIcons.append(iconRetweet)
     }
 }
 
