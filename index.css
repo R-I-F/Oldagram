@@ -1,0 +1,103 @@
+/* GLOBAL SELECTORS */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+main, body{
+    background-color: #f0f0f0;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+/* SEMANTIC TAGS */
+
+section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;    
+}
+header, section {
+    background: #fff;
+}
+
+.container-one{
+    width: 375px;
+    margin: 0px auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    border-bottom: 2px solid #C6C6C6;
+}
+
+i {
+    margin-right: 5px;
+    font-size: 22px;
+}
+
+p{
+    margin: 6px 0px 6px 13px;
+}
+
+/* SELECTORS AND COMPOUND SELECTORS */
+
+.container-two{
+    display: flex;
+    margin-top: 10px;
+}
+
+.container-two .user-img {
+    margin-left: 10px;
+}
+.container-two p {
+    margin: 0px 0px 0px 7px;
+}
+
+header img {
+    margin-right: 15px;
+}
+
+.icons{
+    width: 104px;
+    height: 22px;
+    display: inline-block;
+    padding: 10px 0px 6px 15px;
+}
+
+p span {
+    margin: 0px;
+}
+
+/* IMAGES */
+
+.user-img{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.logo-img{
+    width: 127px;
+    height: 50px;
+    margin-left: 15px;   
+}
+
+.post-img{
+    width: 100%;
+    margin-top: 13px;
+}
+
+.post-img{
+    width: 100%;
+    margin-top: 13px;
+}
